@@ -33,7 +33,7 @@ public class Calculator {
                             : fullLine;
             boolean isPointFound = false;
             isCorrect = true;
-            if (line.isEmpty()) {
+            if (line.isEmpty()||line.equals(".")) {
                 isCorrect = false;
             } else {
                 char[] symbols = line.toCharArray();

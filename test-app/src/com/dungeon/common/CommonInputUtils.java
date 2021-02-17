@@ -29,16 +29,76 @@ public class CommonInputUtils {
     }
 
     public int readInt(String comment) {
-        System.out.print(comment + ": ");
-        int anInt = scanner.nextInt();
-        scanner.nextLine();
-        return anInt;
+        String line;
+        String fullLine;
+        boolean isCorrect;
+        do {
+            System.out.print(comment + ": ");
+            fullLine = scanner.nextLine();
+            line =
+                    fullLine.startsWith("-") || fullLine.startsWith("+")
+                            ? fullLine.substring(1)
+                            : fullLine;
+            boolean isPointFound = false;
+            isCorrect = true;
+            if (line.isEmpty()) {
+                isCorrect = false;
+            } else {
+                char[] symbols = line.toCharArray();
+                for (int i = 0; i < symbols.length; i++) {
+                    if (!Character.isDigit(symbols[i])) {
+
+                        isCorrect = false;
+                        break;
+                    }
+                }
+            }
+            if (!isCorrect) {
+                System.out.println("incorrect input, try again");
+            }
+        } while (!isCorrect);
+        return Integer.parseInt(fullLine);
     }
 
     public double readDouble(String comment) {
-        System.out.print(comment + ": ");
-        String aDouble = scanner.nextLine();
-        return Double.parseDouble(aDouble);
+        String line;
+        String fullLine;
+        boolean isCorrect;
+        do {
+            System.out.print(comment + ": ");
+            fullLine = scanner.nextLine();
+            line =
+                    fullLine.startsWith("-") || fullLine.startsWith("+")
+                            ? fullLine.substring(1)
+                            : fullLine;
+            boolean isPointFound = false;
+            isCorrect = true;
+            if (line.isEmpty()||line.equals(".")) {
+                isCorrect = false;
+            } else {
+                char[] symbols = line.toCharArray();
+                for (int i = 0; i < symbols.length; i++) {
+                    if (!Character.isDigit(symbols[i])) {
+                        if (symbols[i] == '.') {
+                            if (isPointFound) {
+                                isCorrect = false;
+                                break;
+                            } else {
+                                isPointFound = true;
+                            }
+                        } else {
+
+                            isCorrect = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            if (!isCorrect) {
+                System.out.println("incorrect input, try again");
+            }
+        } while (!isCorrect);
+        return Double.parseDouble(fullLine);
     }
 
     public int[] readIntArray() {

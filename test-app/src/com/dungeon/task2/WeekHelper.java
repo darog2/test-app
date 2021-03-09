@@ -11,19 +11,16 @@ public class WeekHelper {
         String thursday = "четверг";
         String friday = "пятница";
         String saturday = "субота";
-        String syndey = "воскресеенье";
+        String sunday = "воскресеенье";
         String result = null;
-
 
         switch (day) {
             case 1:
                 result = monday;
                 break;
-
             case 2:
                 result = tuesday;
                 break;
-
             case 3:
                 result = wednesday;
                 break;
@@ -37,23 +34,19 @@ public class WeekHelper {
                 result = saturday;
                 break;
             case 7:
-                result = syndey;
+                result = sunday;
                 break;
             default:
                 result = "неверное значение";
                 break;
         }
         return result;
-
-
     }
 
     public String isWeekend(String day) {
         String weekend = "выходной день ";
         String workDay = "рабочий день";
         String result = null;
-
-
         switch (day) {
             case "понедельник":
             case "вторник":
@@ -70,7 +63,6 @@ public class WeekHelper {
                 result = "ты что марсианнин?";
                 break;
         }
-
-                return result;
+        return result;
     }
 }

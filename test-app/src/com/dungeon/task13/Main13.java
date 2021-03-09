@@ -25,12 +25,10 @@ public class Main13 {
         int counterOdd = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == 0) {
-
                 counterZeroes++;
             } else if (numbers[i] % 2 == 0) {
                 counterEven++;
             } else {
-                numbers[i] = 1;
                 counterOdd++;
             }
         }
@@ -50,12 +48,13 @@ public class Main13 {
             numbers2[i] = CommonInputUtils.getInstance().createRandomIntArray(matrixSize, -1, 9);
             System.out.println(Arrays.toString(numbers2[i]));
         }
-        for (int row = 0; row < numbers2.length; row++) {
+        for (int rowNumber = 0; rowNumber < numbers2.length; rowNumber++) {
             int counterZeroes = 0;
             int counterEven = 0;
             int counterOdd = 0;
-            for (int column = 0; column < numbers2[row].length; column++) {
-                switch (defineType(numbers2[row][column])){
+            for (int columnNumber = 0; columnNumber < numbers2[rowNumber].length; columnNumber++) {
+                NumberType numberType = defineType(numbers2[rowNumber][columnNumber]);
+                switch (numberType) {
                     case ZERO:
                         counterZeroes++;
                         break;
@@ -65,20 +64,25 @@ public class Main13 {
                     case ODD:
                         counterOdd++;
                         break;
-
                 }
             }
-            System.out.printf(ROW_DESCRIPTION_OUTPUT_TEMPLATE,row,Arrays.toString(numbers2[row]));
-            System.out.printf(NUMBER_TYPES_COUNTERS_OUTPUT_TEMPLATE,counterZeroes,counterEven,counterOdd);
+            System.out.printf(ROW_DESCRIPTION_OUTPUT_TEMPLATE, rowNumber, Arrays.toString(numbers2[rowNumber]));
+            System.out.printf(NUMBER_TYPES_COUNTERS_OUTPUT_TEMPLATE, counterZeroes, counterEven, counterOdd);
             counterZeroesTotal += counterZeroes;
             counterEvenTotal += counterEven;
             counterOddTotal += counterOdd;
         }
 
-        System.out.printf(NUMBER_TYPES_COUNTERS_TOTAL_OUTPUT_TEMPLATE,counterZeroesTotal,counterEvenTotal,counterOddTotal);
+        System.out.printf(NUMBER_TYPES_COUNTERS_TOTAL_OUTPUT_TEMPLATE, counterZeroesTotal, counterEvenTotal, counterOddTotal);
     }
 
     private static NumberType defineType(int number) {
+//        return
+//                number == 0
+//                        ? NumberType.ZERO
+//                        : number % 2 == 0
+//                        ? NumberType.EVEN
+//                        : NumberType.ODD;
         if (number == 0) {
             return NumberType.ZERO;
         } else if (number % 2 == 0) {

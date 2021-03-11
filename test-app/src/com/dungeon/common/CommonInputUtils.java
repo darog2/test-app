@@ -35,11 +35,11 @@ public class CommonInputUtils {
         do {
             System.out.print(comment + ": ");
             fullLine = scanner.nextLine();
-            line =
-                    fullLine.startsWith("-") || fullLine.startsWith("+")
-                            ? fullLine.substring(1)
-                            : fullLine;
-            boolean isPointFound = false;
+            if (fullLine.startsWith("-") || fullLine.startsWith("+")) {
+                line = fullLine.substring(1);
+            } else {
+                line = fullLine;
+            }
             isCorrect = true;
             if (line.isEmpty()) {
                 isCorrect = false;
@@ -67,13 +67,14 @@ public class CommonInputUtils {
         do {
             System.out.print(comment + ": ");
             fullLine = scanner.nextLine();
-            line =
-                    fullLine.startsWith("-") || fullLine.startsWith("+")
-                            ? fullLine.substring(1)
-                            : fullLine;
+            if (fullLine.startsWith("-") || fullLine.startsWith("+")) {
+                line = fullLine.substring(1);
+            } else {
+                line = fullLine;
+            }
             boolean isPointFound = false;
             isCorrect = true;
-            if (line.isEmpty()||line.equals(".")) {
+            if (line.isEmpty() || line.equals(".")) {
                 isCorrect = false;
             } else {
                 char[] symbols = line.toCharArray();
@@ -87,7 +88,6 @@ public class CommonInputUtils {
                                 isPointFound = true;
                             }
                         } else {
-
                             isCorrect = false;
                             break;
                         }
@@ -131,7 +131,7 @@ public class CommonInputUtils {
     public int[] createRandomIntArray(int size, int min, int max) {
         int[] result = new int[size];
         for (int i = 0; i < size; i++) {
-            result[i] = random.nextInt(max - min+1) + min;
+            result[i] = random.nextInt(max - min + 1) + min;
         }
         return result;
 

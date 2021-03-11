@@ -1,4 +1,6 @@
-package com.dungeon.task12;
+package com.dungeon.task12.model;
+
+import java.util.Objects;
 
 // сотрудник
 public class Employee {
@@ -7,6 +9,16 @@ public class Employee {
    private String name;
    private String position;
    private int salary;
+
+    public Employee() {
+    }
+
+    public Employee(String name, String position, int salary) {
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
+
+    }
 
     public String getName() {
         return name;
@@ -35,5 +47,18 @@ public class Employee {
     @Override
     public String toString() {
         return String.format(EMPLOYEE_OUTPUT_TEMPLATE,name,position,salary);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return name.equals(employee.name) && position.equals(employee.position);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, position);
     }
 }

@@ -1,9 +1,9 @@
-package com.dungeon.task12;
+package com.dungeon.task12.model;
+
+import com.dungeon.task12.model.Employee;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Project {
     private static final String PROJECT_OUTPUT_TEMPLATE

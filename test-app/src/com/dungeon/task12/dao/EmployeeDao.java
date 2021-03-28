@@ -8,7 +8,7 @@ import java.util.List;
 
 public class EmployeeDao {
 
-    private static final String EMPLOYEE_FILE_OUTPUT_TEMPLATE = "%s %d %s%n";
+    public static final String EMPLOYEE_FILE_OUTPUT_TEMPLATE = "%s/%d/%s%n";
     public static final String FILE = "E:\\IdeaProjects\\test-app2\\test-app\\resources\\task12\\employees.txt";
 
     public List<Employee> getAllEmployees(BufferedReader reader) throws IOException {

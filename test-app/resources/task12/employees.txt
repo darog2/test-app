@@ -1,4 +1,4 @@
-John 1000 c++_developer
-Sveta 450 office_manager
-Olya 550 java_student
-Daria 1330 Python_developer
+John/1000/c++ developer
+Sveta/450/office manager
+Olya/550/java student
+Daria/1330/Python_developer

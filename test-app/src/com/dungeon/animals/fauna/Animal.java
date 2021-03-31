@@ -1,4 +1,4 @@
-package com.dungeon.animals;
+package com.dungeon.animals.fauna;
 
 import com.dungeon.animals.movement.Move;
 

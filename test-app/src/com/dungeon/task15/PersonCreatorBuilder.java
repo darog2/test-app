@@ -2,6 +2,7 @@ package com.dungeon.task15;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 import java.util.List;
 
 public class PersonCreatorBuilder {
@@ -27,8 +28,8 @@ public class PersonCreatorBuilder {
         fistNamesList = namesLoader.loadFirstNames();
         return this;
     }
-    public PersonCreatorBuilder firstNames(List<String> fistNames) throws IOException, URISyntaxException {
-        fistNamesList = fistNames;
+    public PersonCreatorBuilder firstNames(String... fistNames) throws IOException, URISyntaxException {
+        fistNamesList = Arrays.asList(fistNames);
         return this;
     }
 

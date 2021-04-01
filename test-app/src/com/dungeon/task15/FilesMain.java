@@ -11,7 +11,7 @@ public class FilesMain {
             PersonCreator personCreator =
                     new PersonCreatorBuilder()
                     .cities()
-//                    .firstNames(Arrays.asList("Vasya", "Kostyan"))
+//                    .firstNames("Vasya", "Kostyan")
                     .firstNames()
                     .lastNames()
                     .build();

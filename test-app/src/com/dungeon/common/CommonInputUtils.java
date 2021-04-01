@@ -27,6 +27,10 @@ public class CommonInputUtils {
         return scanner.nextLine();
 
     }
+    public int randomInt(int max){
+        return random.nextInt(max);
+
+    }
 
     public int readInt(String comment) {
         String line;

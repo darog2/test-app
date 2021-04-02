@@ -13,16 +13,16 @@ import java.util.stream.Collectors;
 
 public class NamesLoader {
     public List<String> loadFirstNames() throws URISyntaxException, IOException {
-        Path path = Paths.get(ClassLoader.getSystemResource("task15/names.txt").toURI());
+        return load("names.txt");
+    }
+
+    public List<String> loadLastNames() throws URISyntaxException, IOException {
+        return load("last-names.txt");
+    }
+    private List<String> load(String file) throws IOException, URISyntaxException {
+        Path path = Paths.get(ClassLoader.getSystemResource("task15/"+file).toURI());
         List<String> fileData = Files.lines(path).collect(Collectors.toList());
         return fileData;
+
     }
-public List<String> loadLastNames() throws URISyntaxException, IOException {
-    Path path = Paths.get(ClassLoader.getSystemResource("task15/last-names.txt").toURI());
-    List<String> fileData = Files.lines(path).collect(Collectors.toList());
-    for (int i = 0; i < fileData.size(); i++) {
-        fileData.set(i, StringUtils.capitalize(fileData.get(i).toLowerCase()));
-    }
-    return fileData;
-}
 }

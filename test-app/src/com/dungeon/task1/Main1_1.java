@@ -25,4 +25,12 @@ public class Main1_1 {
 
 
     }
+//    public void f1(){}
+//    public Character f1(){return 'a';}
+    public void f1(int num1){}
+    public void f1(int num1,int num2){}
+    public void f1(String str1){}
+    public void f1(String str1, int num1){}
+    public void f1(double num1){}
+    public void f1(String str1, double num1){}
 }

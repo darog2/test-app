@@ -14,4 +14,5 @@ public class TaxManager {
         double tax = calculator.calculateTax(sum);
         return sum + tax;
     }
+
 }

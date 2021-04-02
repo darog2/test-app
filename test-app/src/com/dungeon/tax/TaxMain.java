@@ -8,8 +8,6 @@ public class TaxMain {
         manager
                 .addCalculator("UA",new UkraineTaxCalculator())
                 .addCalculator("UK",new GreatBritainTaxCalculator());
-        TaxCalculator calculator = new GreatBritainTaxCalculator();
-        TaxCalculator calculator1 = new UkraineTaxCalculator();
         double sum = 75_000;
         double total = manager.calculateTotalSum("UA",sum);
         System.out.println("total in UA= " + total);

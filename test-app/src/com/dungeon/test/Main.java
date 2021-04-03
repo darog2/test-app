@@ -7,7 +7,19 @@ import java.util.Arrays;
 
 
 public class Main {
-    public static void main( String[] args) {
+    public static void main(String[] args) {
+        Notifier sms= new SMSNotifier();
+        Notifier smsAndEmail = new SMSNotifier(new EmailNotifier());
+        Notifier all =  new SMSNotifier(new EmailNotifier(new PushNotifier()));
+        all = new RedditNotifier(all);
+        Notifier ex = new PushNotifier();
+        ex.setChild(new EmailNotifier());
+        System.out.println("******sms******");
+        sms.sendMessage("Vasya loh");
+        System.out.println("******smsAndEmail******");
+        smsAndEmail.sendMessage("Petya loh");
+        System.out.println("******all******");
+        all.sendMessage("Dasha loh");
 
         int[] mas = CommonInputUtils.getInstance().createRandomIntArray(10, 2, 22);
 //        int[] mas = {17, 14, 8, 6, 2, 4, 12, 4, 8, 5};

@@ -11,9 +11,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        boolean a = true;
-        boolean b = false;
-        IllegalArgumentException argumentException;
         Client client = new Client("John",
                 "john.doe@mail.cc",
                 "+1000654541",

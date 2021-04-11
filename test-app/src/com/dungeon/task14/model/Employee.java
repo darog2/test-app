@@ -13,7 +13,12 @@ public class Employee extends Human{
         System.out.println("i am employee");
     }
 
-    public Employee(String name, String email, String phone, int age, String position, double salary) {
+    public Employee(String name,
+                    String email,
+                    String phone,
+                    int age,
+                    String position,
+                    double salary) {
         super(name, email, phone, age);
         this.position = position;
         this.salary = salary;

@@ -1,6 +1,8 @@
-package com.dungeon.task15;
+package com.dungeon.task15.util;
 
 import com.dungeon.common.CommonInputUtils;
+import com.dungeon.task15.Human;
+import com.dungeon.task15.util.Cities;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.dungeon.task15;
+package com.dungeon.task15.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;

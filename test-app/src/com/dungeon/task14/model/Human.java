@@ -8,7 +8,10 @@ public abstract class Human {
     protected String phone;
     protected int age;
 
-    protected Human(String name, String email, String phone, int age) {
+    protected Human(String name,
+                    String email,
+                    String phone,
+                    int age) {
         this.name = name;
         this.email = email;
         this.phone = phone;

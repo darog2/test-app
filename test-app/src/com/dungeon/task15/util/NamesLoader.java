@@ -1,4 +1,4 @@
-package com.dungeon.task15;
+package com.dungeon.task15.util;
 
 import org.apache.commons.lang3.StringUtils;
 

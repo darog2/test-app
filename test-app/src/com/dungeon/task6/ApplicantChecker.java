@@ -16,6 +16,13 @@ public class ApplicantChecker {
             System.out.println(applicant.name + " подходит для вакансии " + vacancy.jobName);
             return;
         }
+        if (applicant.age >= vacancy.age
+                && (applicant.experience >= vacancy.experience
+                || vacancy.education
+                && applicant.education)) {
+            System.out.println(applicant.name + " подходит для вакансии " + vacancy.jobName);
+            return;
+        }
         System.out.println(applicant.name + " не подходит для вакансии " + vacancy.jobName);
 
     }

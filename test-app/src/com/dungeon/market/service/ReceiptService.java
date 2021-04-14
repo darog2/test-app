@@ -6,6 +6,7 @@ import com.dungeon.market.model.Product;
 import com.dungeon.market.model.Receipt;
 
 import java.text.SimpleDateFormat;
+import java.util.Formatter;
 import java.util.Map;
 
 public class ReceiptService {
@@ -17,7 +18,7 @@ public class ReceiptService {
     public static final String CASHIER_FORMAT = "|Кассир :    %-38.38s|%n";
     public static final String FULLNAME_FORMAT = "%s %s";
     public static final String TIME_FORMAT = "|Время  :    %-38s|%n";
-
+    public static final String PRODUCTS_LINE= "|                      Товары                      |";
     public void printReceipt(Market market, Receipt receipt, int rowNumber){
         double totalPrice = 0;
 
@@ -29,17 +30,22 @@ public class ReceiptService {
         System.out.printf(CASHIER_FORMAT, prepareFullName(receipt.getCashier()));
         System.out.printf(TIME_FORMAT, date);
         System.out.println(EMPTY_LINE);
-        System.out.println(EMPTY_LINE
-
-                " Товары");
-        System.out.println();
+        System.out.println(PRODUCTS_LINE);
+        System.out.println(EMPTY_LINE);
+        Formatter formatter = new Formatter();
         for (Map.Entry<Product, Integer> entry : receipt.getProducts().entrySet()) {
             totalPrice= totalPrice + entry.getKey().getPrice()*entry.getValue();
-            System.out.println(entry.getKey().getName()+"       "+ entry.getKey().getPrice()+" x "+entry.getValue());
+
+//            System.out.format(entry.getKey().getName()+"       "+ entry.getKey().getPrice()+" x "+entry.getValue());
+            System.out.println((formatter.format(getKey().getName()+"       "+ entry.getKey().getPrice()+" x "+entry.getValue()));
         }
         System.out.println(HORIZONTAL_BORDER);
         System.out.println(("Total price:  ") + totalPrice);
     }
+
+    private Cashier getKey() {
+    }
+
     public String prepareFullName(Cashier cashier){
         return String.format(FULLNAME_FORMAT, cashier.getName(),cashier.getLastName());
     }

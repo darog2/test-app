@@ -28,8 +28,10 @@ public class ReceiptService {
         System.out.printf(ROW_NUMBER_FORMAT, rowNumber);
         System.out.printf(CASHIER_FORMAT, prepareFullName(receipt.getCashier()));
         System.out.printf(TIME_FORMAT, date);
-        System.out.println();
-        System.out.println("              Товары");
+        System.out.println(EMPTY_LINE);
+        System.out.println(EMPTY_LINE
+
+                " Товары");
         System.out.println();
         for (Map.Entry<Product, Integer> entry : receipt.getProducts().entrySet()) {
             totalPrice= totalPrice + entry.getKey().getPrice()*entry.getValue();

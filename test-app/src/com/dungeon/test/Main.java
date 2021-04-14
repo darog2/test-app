@@ -1,11 +1,10 @@
 package com.dungeon.test;
 
-import com.dungeon.common.CommonInputUtils;
 
-import java.util.Arrays;
 
-public class Main {
-    public static void main( String[] args) {
+
+
+
 
 //        int [] mas =CommonInputUtils.getInstance().createRandomIntArray(8,2,22);
 //
@@ -25,7 +24,4 @@ public class Main {
 //        }
 //        System.out.println(Arrays.toString(mas));
 //    }
-        PupAge pupAge = new PupAge();
-        pupAge.pupAge();
-    }
-}
+

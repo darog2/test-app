@@ -9,26 +9,31 @@ import java.util.List;
 public class EmployeeDao {
 
     public static final String EMPLOYEE_FILE_OUTPUT_TEMPLATE = "%s/%d/%s%n";
-    public static final String FILE = "E:\\IdeaProjects\\test-app2\\test-app\\resources\\task12\\employees.txt";
 
     public List<Employee> getAllEmployees(BufferedReader reader) throws IOException {
-        List<Employee> employees = new LinkedList<>();
+        List<Employee> employeeList = new LinkedList<>();
         while (reader.ready()) {
             String line = reader.readLine();
-            String[] parts = line.split("\\s");
-            Employee employee = new Employee(parts[0], parts[2], Integer.parseInt(parts[1]));
-            employees.add(employee);
+            String[] parts = line.split("/");
+            String name = parts[0];
+            String position = parts[2];
+            String salary = parts[1];
+            Employee employee = new Employee(name, position, Integer.parseInt(salary));
+            employeeList.add(employee);
         }
 
-        return employees;
+        return employeeList;
     }
 
-    public void saveEmployees(List<Employee> employees, FileWriter writer) throws IOException {
-        for (Employee employee : employees) {
-            writer.append(String.format(EMPLOYEE_FILE_OUTPUT_TEMPLATE,
-                    employee.getName(),
-                    employee.getSalary(),
-                    employee.getPosition()));
+    public void saveEmployees(List<Employee> employeeList,
+                              FileWriter writer)
+            throws IOException {
+        for (Employee employee : employeeList) {
+            writer.append(
+                    String.format(EMPLOYEE_FILE_OUTPUT_TEMPLATE,
+                            employee.getName(),
+                            employee.getSalary(),
+                            employee.getPosition()));
         }
         writer.flush();
     }

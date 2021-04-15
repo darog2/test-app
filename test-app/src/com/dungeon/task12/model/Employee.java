@@ -1,6 +1,8 @@
 package com.dungeon.task12.model;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 // сотрудник
 public class Employee {
@@ -9,11 +11,14 @@ public class Employee {
    private String name;
    private String position;
    private int salary;
+   private Set<Skill> skills;
 
     public Employee() {
+        this.skills = new HashSet<>();
     }
 
     public Employee(String name, String position, int salary) {
+        this();
         this.name = name;
         this.position = position;
         this.salary = salary;
@@ -42,6 +47,10 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public Set<Skill> getSkills() {
+        return skills;
     }
 
     @Override

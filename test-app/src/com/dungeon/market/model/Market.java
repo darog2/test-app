@@ -10,6 +10,7 @@ public class Market {
     public Market(String name, int cashRegistersCount) {
         this.name = name;
         this.cashRegistersCount = cashRegistersCount;
+
     }
 
     public String getName() {

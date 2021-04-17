@@ -1,4 +1,4 @@
-package com.dungeon.task17;
+package com.dungeon.task17.model;
 
 public class Component {
     private String name;

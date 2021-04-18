@@ -1,6 +1,5 @@
 package com.dungeon.task17;
 
-import com.dungeon.common.DateFormatUtil;
 import com.dungeon.task17.model.Client;
 import com.dungeon.task17.model.Component;
 import com.dungeon.task17.model.ComponentAmount;
@@ -10,7 +9,6 @@ import com.dungeon.task17.service.OrderService;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class PizaaMain {
     public static void main(String[] args) {
@@ -21,10 +19,10 @@ public class PizaaMain {
         client.setPhoneNumber("1232189338");
         Component component=new Component("Hen",15);
         Component component1=new Component();
-        Component component2=new Component("tomato sauce",2.3);
-        component1.setName("onion");
+        Component component2=new Component("Tomato sauce",2.3);
+        component1.setName("Onion");
         component1.setPrice(33);
-        Pizza pizza=new Pizza("margoritta");
+        Pizza pizza=new Pizza("Margarita");
         pizza.getComposition().put(component, ComponentAmount.LESS);
         pizza.getComposition().put(component2,ComponentAmount.MEDIUM);
         pizza.getComposition().put(component1,ComponentAmount.A_LOT);

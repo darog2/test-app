@@ -37,5 +37,6 @@ public class PizaaMain {
         order.setDeliveryDate(deliver);
         OrderService orderService = new OrderService();
         orderService.printOrder(order);
+        orderService.writeOrderToFile(order);
     }
 }

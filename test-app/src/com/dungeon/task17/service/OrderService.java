@@ -1,12 +1,19 @@
 package com.dungeon.task17.service;
 
 import com.dungeon.common.DateFormatUtil;
+import com.dungeon.market.model.Market;
+import com.dungeon.market.model.Receipt;
 import com.dungeon.task17.model.Component;
 import com.dungeon.task17.model.ComponentAmount;
 import com.dungeon.task17.model.Order;
 import com.dungeon.task17.model.Pizza;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Date;
 import java.util.Map;
+
+import static com.dungeon.market.service.ReceiptService.REPORT_NAME_TEMPLATE;
 
 public class OrderService {
 
@@ -52,5 +59,40 @@ public class OrderService {
         System.out.printf(BASE_PRICE, Pizza.MIN_PRICE);
         System.out.printf(TOTAL_PRICE, price);
         System.out.println(MIDDLE_BORDER);
+    }
+    public void writeOrderToFile(Order order,  int rowNumber) {
+        try (FileWriter writer = new FileWriter(generateOrderName(order.getOrderDate()))) {
+
+           writer.write(TOP_BORDER+System.lineSeparator());
+           writer.write(HEADER+System.lineSeparator());
+           writer.write(EMPTY_LINE+System.lineSeparator());
+            writer.write(String.format(ORDER_DATE, DateFormatUtil.getStringFromDate(order.getOrderDate())));
+            writer.write(String.format(DELIVERY_DATE, order.getDeliveryDate()));
+            writer.write(EMPTY_LINE+System.lineSeparator());
+            writer.write(String.format(CLIENT_NAME, order.getClient().getName()));
+            writer.write(String.format(PHONE, order.getClient().getPhoneNumber()));
+            writer.write(String.format(ADDRESS, order.getClient().getAddress()));
+            writer.write(EMPTY_LINE+System.lineSeparator());
+            writer.write(String.format(PIZZA_NAME, order.getPizza().getName()));
+            writer.write(EMPTY_LINE+System.lineSeparator());
+            double price = Pizza.MIN_PRICE;
+            for (Map.Entry<Component, ComponentAmount> entry : order.getPizza().getComposition().entrySet()) {
+
+                price = price + entry.getKey().getPrice() * entry.getValue().getPriceMultiplier();
+
+                writer.write(String.format(COMPONENT_TEMPLATE, entry.getKey().getName(), entry.getValue(), entry.getKey().getPrice(), entry.getValue().getPriceMultiplier()));
+            }
+            writer.write(EMPTY_LINE+System.lineSeparator());
+            writer.write(EMPTY_LINE+System.lineSeparator());
+            writer.write(MIDDLE_BORDER+System.lineSeparator());
+            writer.write(String.format(BASE_PRICE, Pizza.MIN_PRICE));
+            writer.write(String.format(TOTAL_PRICE, price));
+            writer.write(MIDDLE_BORDER+System.lineSeparator());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private String generateOrderName(Date date){
+        return String.format(REPORT_NAME_TEMPLATE, DateFormatUtil.formatDateAsReportNamePart(date));
     }
 }

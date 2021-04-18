@@ -1,4 +1,4 @@
-package com.dungeon.task17.model;
+package com.dungeon.pizza.model;
 
 public class Client {
     private String name;

@@ -1,4 +1,4 @@
-package com.dungeon.task17.model;
+package com.dungeon.pizza.model;
 
 public enum ComponentAmount {
     NONE(0, "none"),

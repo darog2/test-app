@@ -1,25 +1,27 @@
-package com.dungeon.task17.model;
+package com.dungeon.pizza.model;
 
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Order {
-   private Pizza pizza;
+   private List<Pizza>pizzaList;
    private Client client;
    private Date orderDate;
    private Date deliveryDate;
 
-    public Order(Pizza pizza, Client client) {
-        this.pizza = pizza;
+    public Order(Client client) {
+        this.pizzaList=new LinkedList<>();
         this.client = client;
         this.orderDate = new Date();
     }
 
-    public Pizza getPizza() {
-        return pizza;
+    public List<Pizza> getPizzaList() {
+        return pizzaList;
     }
 
-    public void setPizza(Pizza pizza) {
-        this.pizza = pizza;
+    public void addPizza(Pizza pizza) {
+        this.pizzaList.add(pizza);
     }
 
     public Date getDeliveryDate() {

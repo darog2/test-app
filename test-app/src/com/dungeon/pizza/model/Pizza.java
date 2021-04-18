@@ -1,4 +1,4 @@
-package com.dungeon.task17.model;
+package com.dungeon.pizza.model;
 
 import java.util.HashMap;
 import java.util.Map;

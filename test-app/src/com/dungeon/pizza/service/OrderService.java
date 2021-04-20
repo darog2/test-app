@@ -26,10 +26,10 @@ public class OrderService {
     //    public static final String BASE_PRICE = "| Base price :                         $%-11.2f|%n";
     public static final String COMPONENT_TEMPLATE = "|  %-16.14s%-14.14s%16.16s  |%n";
     public static final String REPORT_NAME_TEMPLATE = "order_%s_%s__.txt";
-    public static final String TOTAL_PRICE = "| Total price:                         $%,-11.2f|%n";
-    public static final String PRICE_TEMPLATE = "%,6.2f x %1.1f";
+    public static final String TOTAL_PRICE = "| Total price:                         $%-11.2f|%n";
+    public static final String PRICE_TEMPLATE = "%6.2f x %1.1f";
     public static final String PRICE_PER_PIZZA = "|  Price per %-26.23s%10.10s  |";
-    public static final String PRICE_PER_PIZZA_NUMBER_TEMPLATE = "$%,-6.2f";
+    public static final String PRICE_PER_PIZZA_NUMBER_TEMPLATE = "$%-6.2f";
 
     private String prepareReport(Order order) {
         StringBuilder report = new StringBuilder(TOP_BORDER);

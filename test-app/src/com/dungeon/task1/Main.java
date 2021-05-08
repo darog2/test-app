@@ -8,7 +8,7 @@ public class Main {
         SeasonHelper helper = new SeasonHelper();
 
         Scanner scanner = new Scanner(System.in);
-        int monthNumber= scanner.nextInt();
+        int monthNumber = scanner.nextInt();
         String monthName = helper.getMonthNameByMonthNumber(monthNumber);
         System.out.println(monthName);
 

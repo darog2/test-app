@@ -1,14 +1,19 @@
-package com.dungeon.school;
+package com.dungeon.school.model;
 
-public class Student {
+import java.util.List;
+
+public class Teacher {
     private String fistName;
     private String lastName;
-    private int age;
+    private List<Subject> listSubject;
 
-    public Student(String fistName, String lastName, int age) {
+    public Teacher(String fistName, String lastName, List<Subject> listthing) {
         this.fistName = fistName;
         this.lastName = lastName;
-        this.age = age;
+        this.listSubject = listthing;
+    }
+
+    public Teacher() {
     }
 
     public String getFistName() {
@@ -27,13 +32,11 @@ public class Student {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
+    public List<Subject> getListSubject() {
+        return listSubject;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setListSubject(List<Subject> listSubject) {
+        this.listSubject = listSubject;
     }
-
-
 }

@@ -1,6 +1,6 @@
 package com.dungeon.test;
 
-public class SMSNotifier implements Notifier{
+public class SMSNotifier implements Notifier {
     private Notifier child = null;
 
     public SMSNotifier(Notifier child) {
@@ -13,7 +13,7 @@ public class SMSNotifier implements Notifier{
     @Override
     public void sendMessage(String text) {
         System.out.println("sms sent:  " + text);
-        if (child!= null) {
+        if (child != null) {
             child.sendMessage(text);
         }
     }

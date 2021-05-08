@@ -59,29 +59,30 @@ public class ReceiptService {
             double totalPrice = 0;
 
             String date = REPORT_DATE_FORMAT.format(receipt.getDate());
-            writer.write(TOP_HORIZONTAL_BORDER+System.lineSeparator());
+            writer.write(TOP_HORIZONTAL_BORDER + System.lineSeparator());
             writer.write(String.format(MARKET_NAME_FORMAT, market.getName(), EMPTY));
-            writer.write(EMPTY_LINE+System.lineSeparator());
+            writer.write(EMPTY_LINE + System.lineSeparator());
             writer.write(String.format(ROW_NUMBER_FORMAT, rowNumber));
             writer.write(String.format(CASHIER_FORMAT, prepareFullName(receipt.getCashier())));
             writer.write(String.format(TIME_FORMAT, date));
-            writer.write(EMPTY_LINE+System.lineSeparator());
-            writer.write(PRODUCTS_HEADER+System.lineSeparator());
-            writer.write(EMPTY_LINE+System.lineSeparator());
+            writer.write(EMPTY_LINE + System.lineSeparator());
+            writer.write(PRODUCTS_HEADER + System.lineSeparator());
+            writer.write(EMPTY_LINE + System.lineSeparator());
             for (Map.Entry<Product, Integer> entry : receipt.getProducts().entrySet()) {
                 totalPrice = totalPrice + entry.getKey().getPrice() * entry.getValue();
                 String formattedPrice = String.format(PRICE_TEMPLATE, entry.getKey().getPrice(), entry.getValue());
                 writer.write(String.format(PRODUCT_TEMPLATE, entry.getKey().getName(), formattedPrice));
 
             }
-            writer.write(HORIZONTAL_BORDER+System.lineSeparator());
+            writer.write(HORIZONTAL_BORDER + System.lineSeparator());
             writer.write(String.format(TOTAL_PRICE_TEMPLATE, totalPrice));
-            writer.write(HORIZONTAL_BORDER+System.lineSeparator());
+            writer.write(HORIZONTAL_BORDER + System.lineSeparator());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private String generateReceiptName(Date date){
+
+    private String generateReceiptName(Date date) {
         return String.format(REPORT_NAME_TEMPLATE, REPORT_NAME_DATE_FORMAT.format(date));
     }
 

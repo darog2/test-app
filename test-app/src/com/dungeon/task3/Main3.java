@@ -27,9 +27,7 @@ public class Main3 {
         Tomato tomato = serega.goBuyTomato();
         Potato potato = serega.goBuyPotato();
         Onion onion = serega.goBuyOnion();
-        Soup soup = dasha.cookTheSoup(meat, potato, onion, cucumber,tomato);
-
-
+        Soup soup = dasha.cookTheSoup(meat, potato, onion, cucumber, tomato);
 
 
     }

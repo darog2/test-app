@@ -1,16 +1,14 @@
 package com.dungeon.task12.model;
 
-import com.dungeon.task12.model.Employee;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
     private static final String PROJECT_OUTPUT_TEMPLATE
             = "projectName\t= %s\nmonthlyBudget\t= %d\nemployees:\n%s\n";
-     private String projectName;
-     private int monthlyBudget;
-     private final List<Employee> employees;
+    private final List<Employee> employees;
+    private String projectName;
+    private int monthlyBudget;
 
     public Project() {
         employees = new ArrayList<>();

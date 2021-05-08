@@ -21,15 +21,15 @@ public class VenisonInHungarian {
     private Pepper pepper;
     private Pork pork;
     private Cabbage cabbage;
-    private int venisonRequired=2;
-    private int cornRequired=6;
-    private int pumpkinRequired=7;
-    private int crackerRequired=2;
-    private int potatoRequired=7;
-    private int duckRequired=2;
-    private int pepperRequired=9;
-    private int porkRequired=2;
-    private int cabbageRequired=4;
+    private int venisonRequired = 2;
+    private int cornRequired = 6;
+    private int pumpkinRequired = 7;
+    private int crackerRequired = 2;
+    private int potatoRequired = 7;
+    private int duckRequired = 2;
+    private int pepperRequired = 9;
+    private int porkRequired = 2;
+    private int cabbageRequired = 4;
 
     public VenisonInHungarian(Venison venison, Corn corn, Pumpkin pumpkin, Cracker cracker, Potato potato, Duck duck, Pepper pepper, Pork pork, Cabbage cabbage) throws NotEnoughProductsException {
         this.venison = venison;

@@ -19,15 +19,15 @@ public class MarketMain {
         Product product1 = new Product();
         product1.setName("Шокол. Рошен 1111111111111111111111111 \"и\"");
         product1.setPrice(3005);
-        Market market=new Market("ATB",5);
-        Receipt receipt=new Receipt();
+        Market market = new Market("ATB", 5);
+        Receipt receipt = new Receipt();
         receipt.setCashier(cashier1);
         receipt.setDate(new Date());
         Map<Product, Integer> products = receipt.getProducts();
-        products.put(product,5);
-        receipt.getProducts().put(product1,2);
-        ReceiptService receiptService=new ReceiptService();
-        receiptService.printReceipt(market,receipt, 3);
-        receiptService.writeReceiptToFile(market,receipt, 3);
+        products.put(product, 5);
+        receipt.getProducts().put(product1, 2);
+        ReceiptService receiptService = new ReceiptService();
+        receiptService.printReceipt(market, receipt, 3);
+        receiptService.writeReceiptToFile(market, receipt, 3);
     }
 }

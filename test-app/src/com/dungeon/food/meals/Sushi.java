@@ -11,10 +11,10 @@ public class Sushi {
     private Fish fish;
     private Cheese cheese;
     private Cucumber cucumber;
-    private int riceRequired=5;
-    private int fishRequired=2;
-    private int cheesRequired=3;
-    private  int cucumberRequired=4;
+    private int riceRequired = 5;
+    private int fishRequired = 2;
+    private int cheesRequired = 3;
+    private int cucumberRequired = 4;
 
     public Sushi(Rice rice, Fish fish, Cheese cheese, Cucumber cucumber) throws NotEnoughProductsException {
         this.rice = rice;

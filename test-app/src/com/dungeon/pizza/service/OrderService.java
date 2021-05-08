@@ -50,7 +50,7 @@ public class OrderService {
         report.append(EMPTY_LINE);
         report.append(System.lineSeparator());
         double totalPrice = 0;
-        for(Pizza pizza : order.getPizzaList()) {
+        for (Pizza pizza : order.getPizzaList()) {
             double price = Pizza.MIN_PRICE;
             report.append(String.format(PIZZA_NAME_HEADER, formatPizzaName(pizza)));
             report.append(EMPTY_LINE);
@@ -79,13 +79,14 @@ public class OrderService {
         }
         report.append(MIDDLE_BORDER);
         report.append(System.lineSeparator());
-        report.append(String.format(TOTAL_PRICE,totalPrice));
+        report.append(String.format(TOTAL_PRICE, totalPrice));
         report.append(MIDDLE_BORDER);
         report.append(System.lineSeparator());
         return report.toString();
     }
+
     private String formatPizzaName(Pizza pizza) {
-        return String.format(PIZZA_NAME_TEMPLATE,pizza.getName());
+        return String.format(PIZZA_NAME_TEMPLATE, pizza.getName());
     }
 
     public void printOrder(Order order) {

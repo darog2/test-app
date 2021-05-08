@@ -2,7 +2,7 @@ package com.dungeon.market.model;
 
 public class Market {
     private String name;
-    private  int cashRegistersCount;
+    private int cashRegistersCount;
 
     public Market() {
     }

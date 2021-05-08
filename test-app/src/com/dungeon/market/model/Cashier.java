@@ -11,6 +11,7 @@ public class Cashier {
         this.name = name;
         this.lastName = lastName;
     }
+
     public String getName() {
         return name;
     }

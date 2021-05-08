@@ -10,17 +10,17 @@ public enum ComponentAmount {
     private final double priceMultiplier;
     private final String nameInReport;
 
+    ComponentAmount(double priceMultiplier, String nameInReport) {
+        this.priceMultiplier = priceMultiplier;
+        this.nameInReport = nameInReport;
+    }
+
     public double getPriceMultiplier() {
         return priceMultiplier;
     }
 
     public String getNameInReport() {
         return nameInReport;
-    }
-
-    ComponentAmount(double priceMultiplier, String nameInReport) {
-        this.priceMultiplier = priceMultiplier;
-        this.nameInReport = nameInReport;
     }
 
 }

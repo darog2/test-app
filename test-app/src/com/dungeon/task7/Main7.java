@@ -10,63 +10,10 @@ public class Main7 {
 
 
     public static void main(String[] args) {
-        int[]number=CommonInputUtils.getInstance().createRandomIntArray();
+        int[] number = CommonInputUtils.getInstance().createRandomIntArray();
         System.out.println(Arrays.toString(number));
 
     }
-
-    public void replaceSearchSymbolInString() {
-        Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.nextLine();
-        String searchString = scanner.nextLine();
-        char search = searchString.charAt(0);
-        char[] symbols = userInput.toCharArray();
-
-        for (int i = 0; i < userInput.length(); i++) {
-            if (symbols[i] == search) {
-                symbols[i] = 'a';
-            }
-        }
-        userInput = String.valueOf(symbols);
-        System.out.println(userInput);
-
-
-    }
-
-    public void countIntMatches() {
-        System.out.println("введите размер массива ");
-        Scanner scanner = new Scanner(System.in);
-        int size = scanner.nextInt();
-        System.out.println("введите желаемое число ");
-        int search = scanner.nextInt();
-        int[] number = new int[size];
-
-        Random random = new Random();
-        System.out.println(Arrays.toString(number));
-        for (int i = 0; i < number.length; i++) {
-            number[i] = random.nextInt(45) + 5;
-        }
-//        number[0] = 2;
-//        number[1] = 4;
-//        number[2] = 5;
-//        number[3] = 9;
-//        number[4] = 14;
-//        number[5] = 18;
-//        number[6] = 33;
-        System.out.println(Arrays.toString(number));
-
-        int count = 0;
-
-
-        for (int i = 0; i < number.length; i++) {
-            if (search == number[i]) {
-                count++;
-            }
-
-        }
-        System.out.println(count);
-    }
-
 
     public static void descendingSort(int[] numbers) {
 
@@ -95,7 +42,6 @@ public class Main7 {
             System.out.println(Arrays.toString(numbers));
         }
     }
-
 
     public static void intMinAndMax() {
         int[] numbers = new int[5];
@@ -228,6 +174,58 @@ public class Main7 {
         }
         if (search == strings[9]) {
             count++;
+        }
+        System.out.println(count);
+    }
+
+    public void replaceSearchSymbolInString() {
+        Scanner scanner = new Scanner(System.in);
+        String userInput = scanner.nextLine();
+        String searchString = scanner.nextLine();
+        char search = searchString.charAt(0);
+        char[] symbols = userInput.toCharArray();
+
+        for (int i = 0; i < userInput.length(); i++) {
+            if (symbols[i] == search) {
+                symbols[i] = 'a';
+            }
+        }
+        userInput = String.valueOf(symbols);
+        System.out.println(userInput);
+
+
+    }
+
+    public void countIntMatches() {
+        System.out.println("введите размер массива ");
+        Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        System.out.println("введите желаемое число ");
+        int search = scanner.nextInt();
+        int[] number = new int[size];
+
+        Random random = new Random();
+        System.out.println(Arrays.toString(number));
+        for (int i = 0; i < number.length; i++) {
+            number[i] = random.nextInt(45) + 5;
+        }
+//        number[0] = 2;
+//        number[1] = 4;
+//        number[2] = 5;
+//        number[3] = 9;
+//        number[4] = 14;
+//        number[5] = 18;
+//        number[6] = 33;
+        System.out.println(Arrays.toString(number));
+
+        int count = 0;
+
+
+        for (int i = 0; i < number.length; i++) {
+            if (search == number[i]) {
+                count++;
+            }
+
         }
         System.out.println(count);
     }

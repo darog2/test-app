@@ -3,7 +3,7 @@ package com.dungeon.school;
 public class Group {
     private int group;
     private String thing;
-   private String curator;
+    private String curator;
 
     public Group(int group, String thing, String curator) {
         this.group = group;

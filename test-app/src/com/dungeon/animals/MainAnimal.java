@@ -32,7 +32,7 @@ public class MainAnimal {
         animals.add(snake);
         animals.add(dog);
         animals.add(cat);
-        animals.addAll(Arrays.asList(penguin, kolibri,horse));
+        animals.addAll(Arrays.asList(penguin, kolibri, horse));
         animals.add(new Fish());
         GoingAndSwimmingAnimal dogg = new Dog();
         dogg.go();

@@ -1,7 +1,5 @@
 package com.dungeon.task2;
 
-import java.util.Scanner;
-
 public class WeekHelper {
 
     public String dayHelper(int day) {

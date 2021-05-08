@@ -5,6 +5,12 @@ import java.util.Scanner;
 
 public class CommonInputUtils {
     private static CommonInputUtils instance = null;
+    private final Scanner scanner;
+    private final Random random;
+    private CommonInputUtils() {
+        scanner = new Scanner(System.in);
+        random = new Random();
+    }
 
     public static CommonInputUtils getInstance() {
         if (null == instance) {
@@ -13,21 +19,13 @@ public class CommonInputUtils {
         return instance;
     }
 
-    private final Scanner scanner;
-    private final Random random;
-
-
-    private CommonInputUtils() {
-        scanner = new Scanner(System.in);
-        random = new Random();
-    }
-
     public String readLine(String comment) {
         System.out.print(comment + ": ");
         return scanner.nextLine();
 
     }
-    public int randomInt(int max){
+
+    public int randomInt(int max) {
         return random.nextInt(max);
 
     }

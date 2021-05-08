@@ -1,4 +1,4 @@
-package com.dungeon.school;
+package com.dungeon.school.model;
 
 public class Subject {
     private String name;
@@ -9,6 +9,9 @@ public class Subject {
         this.name = name;
         this.id = id;
         this.description = description;
+    }
+
+    public Subject() {
     }
 
     public String getName() {

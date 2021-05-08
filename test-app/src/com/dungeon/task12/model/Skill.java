@@ -40,16 +40,12 @@ public class Skill {
         return Objects.hash(name, type);
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public long getId() {
         return id;
     }
 
-    public void setExperience(double experience) {
-        this.experience = experience;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -58,6 +54,10 @@ public class Skill {
 
     public double getExperience() {
         return experience;
+    }
+
+    public void setExperience(double experience) {
+        this.experience = experience;
     }
 
     public SkillType getType() {

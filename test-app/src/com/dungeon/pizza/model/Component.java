@@ -12,6 +12,11 @@ public class Component {
 
     }
 
+    public Component(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }
@@ -25,11 +30,6 @@ public class Component {
     }
 
     public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Component(String name, double price) {
-        this.name = name;
         this.price = price;
     }
 }

@@ -1,16 +1,11 @@
 package com.dungeon.task14.model;
 
-public class Employee extends Human{
+public class Employee extends Human {
     private String position;
     private double salary;
 
     public Employee(String name, String email, String phone, int age) {
         super(name, email, phone, age);
-    }
-
-    @Override
-    public void tellSomething() {
-        System.out.println("i am employee");
     }
 
     public Employee(String name,
@@ -22,6 +17,11 @@ public class Employee extends Human{
         super(name, email, phone, age);
         this.position = position;
         this.salary = salary;
+    }
+
+    @Override
+    public void tellSomething() {
+        System.out.println("i am employee");
     }
 
     public String getPosition() {

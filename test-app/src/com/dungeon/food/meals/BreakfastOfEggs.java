@@ -9,9 +9,9 @@ public class BreakfastOfEggs {
     private Egg egg;
     private Zucchini zucchini;
     private Cheese cheese;
-    private int eggRequired=4;
-    private int zucchiniRequired=2;
-    private  int cheeseRequired=2;
+    private int eggRequired = 4;
+    private int zucchiniRequired = 2;
+    private int cheeseRequired = 2;
 
     public BreakfastOfEggs(Egg egg, Zucchini zucchini, Cheese cheese) throws NotEnoughProductsException {
         this.egg = egg;

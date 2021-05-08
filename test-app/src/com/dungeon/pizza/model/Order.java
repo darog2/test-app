@@ -5,13 +5,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Order {
-   private List<Pizza>pizzaList;
-   private Client client;
-   private Date orderDate;
-   private Date deliveryDate;
+    private List<Pizza> pizzaList;
+    private Client client;
+    private Date orderDate;
+    private Date deliveryDate;
 
     public Order(Client client) {
-        this.pizzaList=new LinkedList<>();
+        this.pizzaList = new LinkedList<>();
         this.client = client;
         this.orderDate = new Date();
     }

@@ -6,6 +6,11 @@ public abstract class Product {
     protected String name;
     protected int count;
 
+    protected Product(String name, int count) {
+        this.name = name;
+        this.count = count;
+    }
+
     public String getName() {
         return name;
     }
@@ -18,14 +23,10 @@ public abstract class Product {
         this.count = count;
     }
 
-    protected Product(String name, int count) {
-        this.name = name;
-        this.count = count;
-    }
-    public void takeSome( int take) throws NotEnoughProductsException {
-        if(take>count){
-            throw new NotEnoughProductsException(name,count,take);
+    public void takeSome(int take) throws NotEnoughProductsException {
+        if (take > count) {
+            throw new NotEnoughProductsException(name, count, take);
         }
-     this.count-=take;
+        this.count -= take;
     }
 }

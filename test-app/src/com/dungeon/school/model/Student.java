@@ -1,4 +1,4 @@
-package com.dungeon.school;
+package com.dungeon.school.model;
 
 public class Student {
     private String fistName;
@@ -9,6 +9,9 @@ public class Student {
         this.fistName = fistName;
         this.lastName = lastName;
         this.age = age;
+    }
+
+    public Student() {
     }
 
     public String getFistName() {

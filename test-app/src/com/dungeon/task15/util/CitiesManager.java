@@ -15,12 +15,13 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class CitiesManager {
-    public Cities loadCities () throws IOException, URISyntaxException {
+    public Cities loadCities() throws IOException, URISyntaxException {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         Path path = Paths.get(ClassLoader.getSystemResource("task15/cities.json").toURI());
         String fileData = Files.lines(path).collect(Collectors.joining());
-        Type type = new TypeToken<Map<String, List<String>>>(){}.getType();
+        Type type = new TypeToken<Map<String, List<String>>>() {
+        }.getType();
         Map<String, List<String>> map = gson.fromJson(fileData, type);
         Cities cities = new Cities(map);
         return cities;

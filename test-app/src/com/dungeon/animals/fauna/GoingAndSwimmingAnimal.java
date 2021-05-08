@@ -1,6 +1,6 @@
 package com.dungeon.animals.fauna;
 
-public interface GoingAndSwimmingAnimal extends GoingAnimal,SwimmingAnimal{
+public interface GoingAndSwimmingAnimal extends GoingAnimal, SwimmingAnimal {
 
 
     @Override

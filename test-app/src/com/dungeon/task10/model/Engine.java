@@ -4,13 +4,15 @@ public class Engine {
     private double volume; // обьем двигателя!
     private double torque; // крутящий момент!
     private String model; // название модели двигателя!
-    public Engine(){
+
+    public Engine() {
 
     }
-    public Engine(String model,double volume,double torque){
-        this.model=model;
-        this.volume=volume;
-        this.torque=torque;
+
+    public Engine(String model, double volume, double torque) {
+        this.model = model;
+        this.volume = volume;
+        this.torque = torque;
 
     }
 

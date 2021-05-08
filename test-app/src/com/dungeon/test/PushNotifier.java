@@ -1,6 +1,6 @@
 package com.dungeon.test;
 
-public class PushNotifier implements Notifier{
+public class PushNotifier implements Notifier {
     private Notifier child = null;
 
     public PushNotifier(Notifier child) {
@@ -13,7 +13,7 @@ public class PushNotifier implements Notifier{
     @Override
     public void sendMessage(String text) {
         System.out.println("dialog window with text:  " + text);
-        if (child!= null) {
+        if (child != null) {
             child.sendMessage(text);
         }
     }

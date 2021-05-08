@@ -1,21 +1,22 @@
 package com.dungeon.test;
 
-public class RedditNotifier implements Notifier{
+public class RedditNotifier implements Notifier {
 
+
+    private Notifier child = null;
 
     public RedditNotifier(Notifier child) {
         this.child = child;
     }
 
+
     public RedditNotifier() {
     }
 
-
-    private Notifier child = null;
     @Override
     public void sendMessage(String text) {
         System.out.println("reddit bot wrote you:  " + text);
-        if (child!= null) {
+        if (child != null) {
             child.sendMessage(text);
         }
     }

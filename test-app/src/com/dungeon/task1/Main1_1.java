@@ -14,23 +14,35 @@ public class Main1_1 {
         dat *= 4;
         dat /= 8;
 
-        dat = dat +1;
-        dat = dat -1;
+        dat = dat + 1;
+        dat = dat - 1;
 
         dat++;
         dat--;
 
         int a = 53;
-        int b = 53%5;
+        int b = 53 % 5;
 
 
     }
-//    public void f1(){}
+
+    //    public void f1(){}
 //    public Character f1(){return 'a';}
-    public void f1(int num1){}
-    public void f1(int num1,int num2){}
-    public void f1(String str1){}
-    public void f1(String str1, int num1){}
-    public void f1(double num1){}
-    public void f1(String str1, double num1){}
+    public void f1(int num1) {
+    }
+
+    public void f1(int num1, int num2) {
+    }
+
+    public void f1(String str1) {
+    }
+
+    public void f1(String str1, int num1) {
+    }
+
+    public void f1(double num1) {
+    }
+
+    public void f1(String str1, double num1) {
+    }
 }

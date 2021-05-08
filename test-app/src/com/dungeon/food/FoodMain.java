@@ -14,11 +14,11 @@ public class FoodMain {
         Broccoli broccoli = new Broccoli(800);
         Rice rice = new Rice(10);
         Cheese cheese = new Cheese(20);
-        Cucumber cucumber= new Cucumber(22);
-        Fish fish= new Fish(32);
+        Cucumber cucumber = new Cucumber(22);
+        Fish fish = new Fish(32);
         try {
             Shit shit = chef.cook(broccoli);
-            Sushi sushi= chef.cook(rice,fish,cheese,cucumber);
+            Sushi sushi = chef.cook(rice, fish, cheese, cucumber);
         } catch (NotEnoughProductsException e) {
             e.printStackTrace();
         } finally {

@@ -1,7 +1,5 @@
 package com.dungeon.task14.model;
 
-import java.util.Arrays;
-
 public abstract class Human {
     protected String name;
     protected String email;
@@ -17,6 +15,7 @@ public abstract class Human {
         this.phone = phone;
         this.age = age;
     }
+
     public abstract void tellSomething();
 
     public String getName() {

@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class ApplicantChecker {
     private final Scanner scanner;
-    public ApplicantChecker(Scanner scanner){
+
+    public ApplicantChecker(Scanner scanner) {
         this.scanner = scanner;
     }
 

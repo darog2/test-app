@@ -5,7 +5,7 @@ public class Client {
     private String address;
     private String phoneNumber;//+38-095-554-54-25
 
-    public Client( ) {
+    public Client() {
     }
 
     public Client(String name, String address, String phoneNumber) {
@@ -34,7 +34,7 @@ public class Client {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String  phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

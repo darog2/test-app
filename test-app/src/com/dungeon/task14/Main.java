@@ -2,9 +2,7 @@ package com.dungeon.task14;
 
 import com.dungeon.task14.model.Client;
 import com.dungeon.task14.model.Employee;
-import com.dungeon.task14.dao.Figure;
 import com.dungeon.task14.model.Human;
-import com.dungeon.task14.dao.Square;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -42,17 +40,13 @@ public class Main {
 //            }
 //        };
 //        humans.add(human1);
-        for (Human human: humans){
+        for (Human human : humans) {
             human.tellSomething();
             System.out.println(human.getClass().getName());
         }
 
 
         System.out.println(Math.sqrt(-50.));
-
-
-
-
 
 
     }

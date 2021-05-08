@@ -1,6 +1,6 @@
 package com.dungeon.task10.model;
 
-public class Wheel implements Cloneable{
+public class Wheel implements Cloneable {
     private int diameter;
     private String protectorModel;
     private String discModel;

@@ -1,11 +1,6 @@
 package com.dungeon.test;
 
 
-
-
-
-
-
 //        int [] mas =CommonInputUtils.getInstance().createRandomIntArray(8,2,22);
 //
 //        boolean isSorted = false;

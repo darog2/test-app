@@ -8,10 +8,10 @@ import java.util.Set;
 public class Employee {
     private static final String EMPLOYEE_OUTPUT_TEMPLATE
             = "Name\t= %s\nposition\t= %s\nsalary\t\t= %d\n";
-   private String name;
-   private String position;
-   private int salary;
-   private Set<Skill> skills;
+    private String name;
+    private String position;
+    private int salary;
+    private Set<Skill> skills;
 
     public Employee() {
         this.skills = new HashSet<>();
@@ -55,7 +55,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return String.format(EMPLOYEE_OUTPUT_TEMPLATE,name,position,salary);
+        return String.format(EMPLOYEE_OUTPUT_TEMPLATE, name, position, salary);
     }
 
     @Override

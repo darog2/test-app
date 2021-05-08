@@ -9,11 +9,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PersonCreatorBuilder {
+    private final NamesLoader namesLoader = new NamesLoader();
     private Cities cities;
     private List<String> firstNamesList;
     private List<String> lastNamesList;
     private PersonCreator result;
-    private final NamesLoader namesLoader = new NamesLoader();
 
     //    CitiesManager citiesManager = new CitiesManager();
 //    Cities cities = citiesManager.loadCities();
@@ -38,7 +38,7 @@ public class PersonCreatorBuilder {
 
     public PersonCreatorBuilder lastNames(String... lastNames) throws IOException, URISyntaxException {
         if (lastNames.length == 0) {
-           lastNamesList = namesLoader.loadLastNames();
+            lastNamesList = namesLoader.loadLastNames();
         } else {
             lastNamesList = Arrays.asList(lastNames);
         }
@@ -53,20 +53,20 @@ public class PersonCreatorBuilder {
         lastNamesList = new ArrayList<>();
         List<String> strings = namesLoader.loadLastNames();
         int size = strings.size();
-        for (int i = 0; i <lastNamesCount; i++) {
-            String lastName =  strings.get(CommonInputUtils.getInstance().randomInt(size));
-           lastNamesList.add(lastName);
+        for (int i = 0; i < lastNamesCount; i++) {
+            String lastName = strings.get(CommonInputUtils.getInstance().randomInt(size));
+            lastNamesList.add(lastName);
         }
         return this;
     }
 
     public PersonCreatorBuilder firstNames(int firstNamesCount) throws IOException, URISyntaxException {
-       firstNamesList = new ArrayList<>();
+        firstNamesList = new ArrayList<>();
         List<String> strings = namesLoader.loadFirstNames();
         int size = strings.size();
-        for (int i = 0; i <firstNamesCount; i++) {
-            String firstName =  strings.get(CommonInputUtils.getInstance().randomInt(size));
-           firstNamesList.add(firstName);
+        for (int i = 0; i < firstNamesCount; i++) {
+            String firstName = strings.get(CommonInputUtils.getInstance().randomInt(size));
+            firstNamesList.add(firstName);
         }
         return this;
 

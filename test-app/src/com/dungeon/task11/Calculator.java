@@ -3,9 +3,9 @@ package com.dungeon.task11;
 import java.util.Scanner;
 
 public class Calculator {
-    private final Scanner scanner = new Scanner(System.in);
     private static final String DESIRED_SUM_OUTPUT_TEMPLATE = "desired sum = %f\nfinal sum = %f\nsteps count = %d";
     private static final String CURRENT_TERM_OUTPUT_TEMPLATE = "current step = %d\ncurrent term = %f\ncurrent sum = %f";
+    private final Scanner scanner = new Scanner(System.in);
 
     public void desiredSum() {
         double sum = 0;
@@ -16,9 +16,9 @@ public class Calculator {
             double term = readDouble();
             counter++;
             sum += term;
-            System.out.println(String.format(CURRENT_TERM_OUTPUT_TEMPLATE,counter,term,sum));
+            System.out.println(String.format(CURRENT_TERM_OUTPUT_TEMPLATE, counter, term, sum));
         }
-        System.out.println(String.format(DESIRED_SUM_OUTPUT_TEMPLATE,desiredSum,sum,counter));
+        System.out.println(String.format(DESIRED_SUM_OUTPUT_TEMPLATE, desiredSum, sum, counter));
     }
 
     private double readDouble() {
@@ -33,7 +33,7 @@ public class Calculator {
                             : fullLine;
             boolean isPointFound = false;
             isCorrect = true;
-            if (line.isEmpty()||line.equals(".")) {
+            if (line.isEmpty() || line.equals(".")) {
                 isCorrect = false;
             } else {
                 char[] symbols = line.toCharArray();

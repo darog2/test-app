@@ -12,10 +12,10 @@ public class HotDog {
     private Butter butter;
     private Flour flour;
     private Mayonnaise mayonnaise;
-    private int dogRequired=1;
-    private int butterRequired=3;
-    private int flourRequired=7;
-    private int mayonnaiseRequired=1;
+    private int dogRequired = 1;
+    private int butterRequired = 3;
+    private int flourRequired = 7;
+    private int mayonnaiseRequired = 1;
 
     public HotDog(Dog dog, Butter butter, Flour flour, Mayonnaise mayonnaise) throws NotEnoughProductsException {
         this.dog = dog;

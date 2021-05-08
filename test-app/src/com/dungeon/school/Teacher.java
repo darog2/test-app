@@ -7,6 +7,12 @@ public class Teacher {
     private String lastName;
     private List<Subject> listSubject;
 
+    public Teacher(String fistName, String lastName, List<Subject> listthing) {
+        this.fistName = fistName;
+        this.lastName = lastName;
+        this.listSubject = listthing;
+    }
+
     public String getFistName() {
         return fistName;
     }
@@ -29,11 +35,5 @@ public class Teacher {
 
     public void setListSubject(List<Subject> listSubject) {
         this.listSubject = listSubject;
-    }
-
-    public Teacher(String fistName, String lastName, List<Subject> listthing) {
-        this.fistName = fistName;
-        this.lastName = lastName;
-        this.listSubject = listthing;
     }
 }

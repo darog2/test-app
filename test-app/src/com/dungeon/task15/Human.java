@@ -1,7 +1,5 @@
 package com.dungeon.task15;
 
-import java.util.Comparator;
-
 public class Human implements Comparable<Human>{
     private String name;
     private String lastName;
